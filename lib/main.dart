@@ -9,8 +9,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         initialRoute: '/',
         routes: {
-        '/':(context) =>SplashScreen(),
-        '/home':(context) => HomeScreen(),
+        '/splash':(context) =>SplashScreen(),
+        '/':(context) => HomeScreen(),
         },
     );
   }
