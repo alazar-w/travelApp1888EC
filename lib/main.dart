@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:travelapp/screens/DetailPage/DetailScreen.dart';
 import 'screens/Screens.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -7,12 +9,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        initialRoute: '/',
-        routes: {
-        '/splash':(context) =>SplashScreen(),
-        '/':(context) => HomeScreen(),
-        },
+      initialRoute: '/',
+      routes: {
+        '/splash': (context) => SplashScreen(),
+        '/': (context) => HomeScreen(),
+        '/detail': (context) => DetailScreen(),
+      },
     );
   }
-  }
-
+}

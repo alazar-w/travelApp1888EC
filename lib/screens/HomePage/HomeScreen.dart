@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.symmetric(
                       horizontal: 16.0, vertical: 8.0),
                   child: Text(
-                    "43 Popular",
+                    "Popular",
                     style: kHeadlineTextStyle,
                   ),
                 ),
