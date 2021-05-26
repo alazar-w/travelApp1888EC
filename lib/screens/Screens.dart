@@ -1,2 +1,2 @@
-export 'HomeScreen.dart';
+export 'HomePage/HomeScreen.dart';
 export 'SplashScreen.dart';
