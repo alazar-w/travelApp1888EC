@@ -5,6 +5,6 @@ const kPrimaryColor = Color(0xFF4d77f7);
 
 var kScreenWidth = (context) => MediaQuery.of(context).size.width;
 const kHeadlineTextStyle = TextStyle(
-  fontWeight: FontWeight.bold
-
+  fontWeight: FontWeight.w500,
+  fontSize: 18.0
 );

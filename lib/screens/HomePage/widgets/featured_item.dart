@@ -11,7 +11,7 @@ class FeaturedItem extends StatelessWidget {
     media = MediaQuery.of(context);
     // TODO: implement build
     return Container(
-      width: media.size.width * 0.75,
+      width: media.size.width * 0.65,
       margin: EdgeInsets.only(right: 6.0),
       child: GestureDetector(
         onTap: (){

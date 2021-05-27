@@ -23,9 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
     MediaQueryData media;
     media = MediaQuery.of(context);
 
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
         backgroundColor: kBackgroundColor,
         body: SafeArea(
           child: SingleChildScrollView(
@@ -54,14 +52,14 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         bottomNavigationBar:BottomNavigationWidget(selectedIndex: _selectedIndex,onItemTapped:_onItemTapped,),
-      ),
-    );
+      );
   }
 
   _appBar() {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Expanded(
             child: Text(
@@ -145,20 +143,15 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   _popularSection() {
-    return Container(
-      height: 150,
-      padding: const EdgeInsets.symmetric(vertical: 16.0),
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 2),
-            child: CardItem(),
-          ),
-          CardItem(),
-          CardItem(),
-        ],
-      ),
+    return Column(
+      children: <Widget>[
+        CardItem(),
+        CardItem(),
+        CardItem(),
+        CardItem(),
+        CardItem(),
+        CardItem(),
+      ],
     );
   }
 }

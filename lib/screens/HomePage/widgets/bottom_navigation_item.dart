@@ -13,12 +13,24 @@ class BottomNavigationWidget extends StatelessWidget {
     media = MediaQuery.of(context);
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20.0),
+        borderRadius: BorderRadius.vertical(top: Radius.circular(25.0)),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black12,
+            offset: Offset(1,2),
+            blurRadius: 2,
+            spreadRadius: 4
+          )
+        ]
       ),
       width: media.size.width * 0.95,
-      margin: EdgeInsets.only(right: 6),
       child: BottomNavigationBar(
+        elevation: 0,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         type: BottomNavigationBarType.fixed,
+        backgroundColor: Color(0x00ffffff),
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Container(
