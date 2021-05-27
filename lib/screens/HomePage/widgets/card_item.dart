@@ -7,6 +7,9 @@ class CardItem extends StatelessWidget {
     MediaQueryData media;
     media = MediaQuery.of(context);
     return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15.0),
+      ),
       margin: EdgeInsets.symmetric(horizontal: 16, vertical: 4.0),
       child: ListTile(
         dense: false,
