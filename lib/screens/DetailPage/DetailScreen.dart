@@ -126,71 +126,10 @@ class _DetailScreenState extends State<DetailScreen> {
                   ),
                 ],
               ),
-//              Stack(
-//                children: <Widget>[
-//                  Positioned(
-//                    top: 0,
-//                    left: 0,
-//                    child: Container(
-//                      width: 40.0,
-//                      height: 40.0,
-//                      decoration: BoxDecoration(
-//                          color: Colors.black,
-//                          borderRadius: BorderRadius.circular(40.0)
-//                      ),
-//                      child: Icon(Icons.bookmark, color: kPrimaryColor,),
-//                    ),
-//                  ),
-//                  Container(
-//                      decoration: BoxDecoration(
-//                        color: Colors.red,
-//                        borderRadius: BorderRadius.circular(20),
-//
-//                      ),
-//                      height: media.size.height * 0.5,
-//                      width: media.size.width,
-//                      child: DetailItem()),
-//                ],
-//
-//              ),
+
             ],
           ),
         ),
       );
   }
-}
-
-_appBar(BuildContext context) {
-  MediaQueryData media;
-  media = MediaQuery.of(context);
-  return Padding(
-    padding: const EdgeInsets.all(16.0),
-    child: Row(
-      children: <Widget>[
-        Expanded(
-          child: FlatButton(
-            child: Icon(Icons.arrow_back),
-            onPressed: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (_) => HomeScreen()));
-            },
-          ),
-        ),
-        SizedBox(
-          width: media.size.width * 0.75,
-        ),
-        Container(
-          height: 50,
-          width: 50,
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.all(Radius.circular(25.0))),
-          child: Icon(
-            Icons.notifications_none,
-            color: Colors.red,
-          ),
-        )
-      ],
-    ),
-  );
 }
