@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:travelapp/helper/constants.dart';
 import 'package:travelapp/screens/DetailPage/widgets/detail_item.dart';
 import 'package:travelapp/screens/HomePage/HomeScreen.dart';
-import 'package:travelapp/screens/HomePage/widgets/card_item.dart';
 import 'package:travelapp/widgets/rating.dart';
 
 class DetailScreen extends StatefulWidget {

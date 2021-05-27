@@ -41,121 +41,123 @@ class _DetailItemState extends State<DetailItem> {
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(40.0), topRight: Radius.circular(40.0))),
       padding: EdgeInsets.all(30.0),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Text(
-            'Newhaven LightHouse\nin Edinburgh,United Kingdom',
-            style: kHeadlineTextStyle,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 20.0),
-            child: Row(
-              children: <Widget>[
-                Row(
-                  children: <Widget>[
-                    Text("Available: "),
-                    Text(
-                      "10:00 -- 18:00",
-                      style: kHeadlineTextStyle,
-                    ),
-                  ],
-                ),
-                Row(
-                  children: <Widget>[
-                    Text("*"),
-                    Text(
-                      "Mon -- Sat",
-                      style: kHeadlineTextStyle,
-                    )
-                  ],
-                ),
-              ],
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              'Newhaven LightHouse\nin Edinburgh,United Kingdom',
+              style: kHeadlineTextStyle,
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Row(
-                  children: <Widget>[
-                    Text("Duration: "),
-                    Text(
-                      "4 hours",
-                      style: kHeadlineTextStyle,
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  width: 20,
-                ),
-                Row(
-                  children: <Widget>[
-                    Text("Price: "),
-                    Text(
-                      "\$20",
-                      style: kHeadlineTextStyle,
-                    ),
-                  ],
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.only(top: 20.0),
+              child: Row(
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      Text("Available: "),
+                      Text(
+                        "10:00 -- 18:00",
+                        style: kHeadlineTextStyle,
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Text("*"),
+                      Text(
+                        "Mon -- Sat",
+                        style: kHeadlineTextStyle,
+                      )
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
-          Slider(
-            value: 20,
-            min: 0,
-            max: 100,
-            divisions: 5,
-            label: 20.round().toString(), onChanged: (double value) {},
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      Text("Duration: "),
+                      Text(
+                        "4 hours",
+                        style: kHeadlineTextStyle,
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Text("Price: "),
+                      Text(
+                        "\$20",
+                        style: kHeadlineTextStyle,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Slider(
+              value: 20,
+              min: 0,
+              max: 100,
+              divisions: 5,
+              label: 20.round().toString(), onChanged: (double value) {},
 //          onChanged: (double value) {
 //            setState(() {
 //              _currentSliderValue = value;
 //            });
 //          },
-          ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 16.0),
-            child: Text("3 person"),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Text(
-                "Total:\$60",
-                style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.black),
-              ),
-              GestureDetector(
-                onTap: () {
-                  showModalBottomSheet(
-                      backgroundColor: Colors.transparent,
-                      isScrollControlled: true,
-                      context: widget.scaffoldKey.currentContext,
-                      builder: (builder) => _bookingModal(context));
-                  // showModalBottomSheet(context: context, builder: (context)=>Container());
-                },
-                child: Container(
-                  height: 50.0,
-                  padding: EdgeInsets.symmetric(horizontal: 18.0),
-                  decoration: BoxDecoration(
-                    color: kPrimaryColor,
-                    borderRadius: BorderRadius.circular(50.0),
-                    gradient: _linearGradientButtonPrimary(),
-                  ),
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Book now",
-                    style: TextStyle(color: Colors.white),
-                  ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 16.0),
+              child: Text("3 person"),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(
+                  "Total:\$60",
+                  style: TextStyle(
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black),
                 ),
-              )
-            ],
-          )
-        ],
+                GestureDetector(
+                  onTap: () {
+                    showModalBottomSheet(
+                        backgroundColor: Colors.transparent,
+                        isScrollControlled: true,
+                        context: widget.scaffoldKey.currentContext,
+                        builder: (builder) => _bookingModal(context));
+                    // showModalBottomSheet(context: context, builder: (context)=>Container());
+                  },
+                  child: Container(
+                    height: 50.0,
+                    padding: EdgeInsets.symmetric(horizontal: 18.0),
+                    decoration: BoxDecoration(
+                      color: kPrimaryColor,
+                      borderRadius: BorderRadius.circular(50.0),
+                      gradient: _linearGradientButtonPrimary(),
+                    ),
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Book now",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
