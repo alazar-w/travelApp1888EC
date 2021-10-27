@@ -1,6 +1,6 @@
 # travelapp
 
-## 1888EC code challange
+## Travel App Design flutter
 
 ![caption](/images/travelAppDesign.gif)
 
